@@ -1,6 +1,7 @@
-const w = 24;
-const h = 24;
-const numMines = 72;
+const w = 16;
+const h = 16;
+const prob = 0.1;
+const numMines = Math.floor(w * h * prob);
 
 const mines = [];
 const data = [];
