@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+}
+
+:root {
+  --h: 220;
+  --s: 60%;
+  --theme: hsl(var(--h), var(--s), 40%);
+  --dark1: hsl(var(--h), var(--s), 30%);
+  --dark2: hsl(var(--h), var(--s), 25%);
+  --dark3: hsl(var(--h), var(--s), 20%);
+  --dark4: hsl(var(--h), var(--s), 10%);
+}
+
+body {
+  position: relative;
+  background-color: var(--dark4);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+.lost {
+  background-image: radial-gradient(#100 50%, #600 100%);
+}
+.won {
+  background-image: radial-gradient(#010 50%, #060 100%);
+}
+
+#board {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+}
+.cell {
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--theme);
+  margin: 2px;
+  text-align: center;
+  transition: background-color 150ms;
+  cursor: pointer;
+}
+.cell:hover {
+  background-color: var(--dark1);
+}
+
+.flag {
+  background-color: var(--dark3) !important;
+}
+.mine {
+  background-color: rgb(196, 44, 44) !important;
+}
+.revealed {
+  background-color: var(--dark1);
+  cursor: default;
+}
+
+.n0 {
+  background-color: var(--dark2) !important;
+}
